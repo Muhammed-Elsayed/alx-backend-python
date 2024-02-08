@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-
 """ Basic annotations concat """
 
+import math
 
-def concat(str1: str, str2: str) -> str:
-    """ Returns sum of two strings """
-    return str1 + str2
+
+def floor(n: float) -> int:
+    """ Returns the floor of the float """
+    return math.floor(n)

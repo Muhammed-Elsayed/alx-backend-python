@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-""" Basic annotations concat """
+""" Define variables """
 
-import math
-
-
-def floor(n: float) -> int:
-    """ Returns the floor of the float """
-    return math.floor(n)
+a: int = 1
+pi: float = 3.14
+i_understand_annotations: bool = True
+school: str = "Holberton"
