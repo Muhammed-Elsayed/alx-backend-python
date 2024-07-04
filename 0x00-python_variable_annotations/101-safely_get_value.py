@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-""" Duck typing - first element of a sequence """
-from typing import Any, Union, Sequence, Iterable, List, Tuple
+""" More involved type annotations  """
+from typing import Mapping, Any, Sequence, Union, TypeVar
 
 
-# The types of the elements of the input are not know
-def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
-    """ Safe first element """
-    if lst:
-        return lst[0]
+T = TypeVar('T')
+
+
+def safely_get_value(dct: Mapping, key: Any,
+                     default: Union[T, None] = None
+                     ) -> Union[Any, T]:
+    """ Safely get value """
+    if key in dct:
+        return dct[key]
     else:
-        return None
+        return default
