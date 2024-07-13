@@ -19,3 +19,9 @@ class TestAccessNestedMap(unittest.TestCase):
         """testing method"""
         result = access_nested_map(nested_map, path)
         self.assertEqual(result, expected)
+
+    def test_access_nested_map_exception(self, nested_map: Mapping,
+                                         path: Sequence):
+        """test exception keyError"""
+        with self.assertRaises(KeyError):
+            access_nested_map(nested_map, path)
